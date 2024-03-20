@@ -3,6 +3,6 @@ WORKDIR /app
 
 COPY . /app
 
-EXPOSE 5032
+EXPOSE 9032
 
 CMD ["python", "manage.py", "runserver"]
