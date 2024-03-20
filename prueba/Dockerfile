@@ -5,4 +5,4 @@ COPY . /app
 
 EXPOSE 5032
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:9032"]
+CMD ["gunicorn", "--bind 0.0.0.0:9032", "prueba.wsgi:application"] 
