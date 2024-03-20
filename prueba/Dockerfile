@@ -5,4 +5,4 @@ COPY . /app
 
 EXPOSE 9032
 
-CMD ["python", "manage.py", "runserver"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:9032"]
