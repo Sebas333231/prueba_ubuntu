@@ -57,3 +57,193 @@
     </body>
 
 </html>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Varela+Round");
+@import url("https://use.fontawesome.com/releases/v6.5.1/css/all.css");
+
+h1{
+    color: #119630;
+}
+
+p{
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+h3,
+h4{
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    font-family: "Varela Round", sans-serif;
+    margin-top: 150px;
+}
+
+.container .item {
+    --color: #eb904b;
+    width: 185px;
+    background-color: var(--color);
+    border-radius: 10px;
+    padding: 10px 5px;
+    box-shadow: 
+        #3c40434d 0px 1px 2px 0px,
+        #3c404326 0px 1px 3px 1px;
+    position: relative;
+    cursor: pointer;
+}
+
+.container .item.dark{
+    --color2: #2ae983;
+    width: 185px;
+    background-color: var(--color2);
+    border-radius: 10px;
+    padding: 10px 5px;
+    box-shadow: 
+        #3c40434d 0px 1px 2px 0px,
+        #3c404326 0px 1px 3px 1px;
+    position: relative;
+    cursor: pointer;
+}
+
+.container .item.dark::after{
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    z-index: 2;
+    height: 80%;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--color2);
+    border-width: 40px 40px 40px 40px;
+    filter: drop-shadow(5px 0 4px #00000094);
+    transition: filter .5s;
+}
+
+.container .item::after{
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    z-index: 2;
+    height: 80%;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--color);
+    border-width: 40px 40px 40px 40px;
+    filter: drop-shadow(5px 0 4px #00000094);
+    transition: filter .5s;
+}
+
+.container .item:nth-child(2) {
+    --color: #813085;
+}
+
+.container .item:nth-child(3){
+    --color: #119630;
+}
+
+.container .item.dark:nth-child(2) {
+    --color2: #e03cc2;
+}
+
+.container .item.dark:nth-child(3){
+    --color2: #ce1124;
+}
+
+.layer {
+    background-color: #f2f2f2;
+    border: 1px solid #fff;
+    border-radius: inherit;
+    padding: 20px;
+    box-shadow: 
+        #00000012 0px 1px 2px,
+        #3c404326 0px 2px 4px,
+        #3c404326 0px 4px 8px,
+        #3c404326 0px 8px 16px,
+        #3c404326 0px 16px 32px,
+        #3c404326 0px 32px 64px;
+    position: relative;
+    left: 10px;
+    transition: left 1s;
+}
+
+.container .item h3{
+    font-weight: 700;
+    text-align: center;
+    color: var(--color);
+}
+
+.container .item.dark h3{
+    font-weight: 700;
+    text-align: center;
+    color: var(--color2);
+}
+
+h4{
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+p{
+    color: #555;
+}
+
+span{
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: var(--color);
+    display: grid;
+    place-content: center;
+    box-shadow: 
+    #00000012 0px 1px 2px,
+    #3c404326 0px 2px 4px,
+    #3c404326 0px 4px 8px,
+    #3c404326 0px 8px 16px,
+    #3c404326 0px 16px 32px,
+    #3c404326 0px 32px 64px;
+    position: absolute;
+    font-size: 14px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+}
+
+.container .item.dark .layer span{
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: var(--color2);
+    display: grid;
+    place-content: center;
+    box-shadow: 
+    #00000012 0px 1px 2px,
+    #3c404326 0px 2px 4px,
+    #3c404326 0px 4px 8px,
+    #3c404326 0px 8px 16px,
+    #3c404326 0px 16px 32px,
+    #3c404326 0px 32px 64px;
+    position: absolute;
+    font-size: 14px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+}
+
+.item:hover::after{
+    filter: drop-shadow(5px 0 4px #0000001a);
+}
+
+.item:hover .layer{
+    left: 50px;
+}
+</style>
